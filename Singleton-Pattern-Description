@@ -1,0 +1,29 @@
+Singleton Pattern => 
+"is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance. In other words, 
+it restricts the instantiation of a class to a single object, which can be accessed from anywhere in the application. 
+This pattern is commonly used when you need to manage a shared resource, configuration settings, or a global state in a controlled manner."
+
+Advantages of Singleton design pattern =>
+
+1. Global Access: It provides a global point of access to the instance, allowing easy access from any part of the application.
+
+2. Resource Management: It helps in efficient resource management, especially for expensive-to-create objects that need to be shared throughout the application.
+
+3. Controlled Instance: It ensures that there is only one instance of the class, avoiding duplication and inconsistent states.
+
+4. Lazy Loading: In the case of lazy instantiation, it defers the instance creation until it is actually required, improving performance and reducing memory consumption.
+
+
+Usages of Singleton design pattern =>
+
+Singleton pattern is commonly used in scenarios where you want to have only one instance of a class, such as:
+
+1. Configuration Management: Managing application configuration settings in a single instance.
+
+2. Database Connections: Creating a single database connection pool to handle all database operations.
+
+3. Logger: Using a single logger instance throughout the application.
+
+4. Caching: Maintaining a single cache instance to store frequently accessed data.
+
+
