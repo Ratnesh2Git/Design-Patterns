@@ -1,0 +1,20 @@
+Factory Design Pattern =>
+
+"The Factory design pattern is a creational design pattern that simplifies object creation. It provides an elegant solution for dynamically creating objects without exposing the complexities of their instantiation to the application code."
+"At its core, the Factory design pattern defines an interface or base class for creating objects but delegates the responsibility of selecting the appropriate concrete class to the subclasses."
+
+
+Usage =>
+
+In Salesforce, the Factory pattern finds extensive utility in scenarios where object creation needs to be flexible and adaptable. Some common applications include:
+
+1. Dynamic Record Creation => Salesforce applications often require the dynamic creation of records, such as leads, opportunities, or cases, based on certain conditions or criteria. The Factory pattern allows developers to create the appropriate record type without complicating conditional logic.
+
+2. Integration Adapters => Integrating with external systems often entails creating objects for data mapping. The Factory pattern simplifies this task, providing a standard method for dynamic object creation to accommodate diverse integration requirements.
+
+Problem Scenario =>
+
+"In your Salesforce application, you need to create and manage different types of email templates for various departments within your organization. Each department requires specific email templates, and the email content and formatting differ between them. Without a structured approach, you’re struggling with scattered code for email template creation, leading to maintenance challenges and code duplication."
+
+Solution using Factory Design Pattern in Apex:
+"To address this problem, you can implement the Factory design pattern to centralize the creation of email templates based on department."
