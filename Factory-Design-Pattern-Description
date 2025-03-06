@@ -18,3 +18,7 @@ Problem Scenario =>
 
 Solution using Factory Design Pattern in Apex:
 "To address this problem, you can implement the Factory design pattern to centralize the creation of email templates based on department."
+
+
+Benefits =>
+1. Used to avoid strong coupling
