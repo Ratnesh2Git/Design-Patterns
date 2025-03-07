@@ -1,0 +1,33 @@
+Builder Pattern => Creational Design Pattern => "Allows to produce different types and representation of an object using the same construction code".
+
+Problem Statement =>
+"Imagine a complex object that requires laborious, step-by-step initialization of many fields and nested objects.
+Such initialization code is usually buried inside a monstrous constructor with lots of parameters Or even worse: scattered all over client code".
+
+Example stating problem =>
+
+Class Cellphone {
+String OS;
+String Processor;
+Double screensize;
+int battery;
+int camera;
+
+public Cellphone(String OS, String Processor, Double screensize, int battery, int camera){
+
+this.os = os;
+this.processor = processor;
+this.screensize = screensize;
+this.battery = battery;
+this.camera = camera;
+}
+}
+
+/**
+Here user needs to remember that in which order they need to pass lots and lots of parameter and we have to set paramaters as default values 
+if some paramters need to be skipped.
+*/
+
+
+Solution => 
+"Extract the object construction code out of its own class and move it to a separate objects called builder."
