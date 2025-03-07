@@ -1,0 +1,14 @@
+Strategy Design Pattern => Here we make different strategy classes for specific behaviours.
+
+"The Strategy pattern allows developers to encapsulate interchangeable algorithms or behaviors and select them at runtime. In the context of Salesforce development, this pattern is often used to handle various tasks, such as payment processing, discount calculations, or integration methods, by defining separate strategy classes for each specific behavior. This approach makes it easy to switch between different strategies without modifying the core logic of the application, enhancing flexibility and maintainability while accommodating changing business requirements and integrations. 
+The Strategy pattern is a powerful tool for optimizing and simplifying complex decision-making processes in Salesforce applications."
+
+
+
+Problem Scenario=>
+
+"Imagine you are building an e-commerce Salesforce application, and you need to handle two different payment methods: credit card payments and PayPal payments. Each payment method has its unique processing logic, and you want to make your payment processing system adaptable to accommodate new payment methods in the future. Hard-coding the payment processing logic within the application would make it challenging to add new payment methods and maintain the code."
+
+Solution using Strategy Pattern in Apex =>
+
+"To solve this problem, you can apply the Strategy pattern to encapsulate the payment processing logic for credit card and PayPal payments in separate strategy classes. This design allows you to dynamically select the appropriate payment processing strategy at runtime. Here’s how you can implement the Strategy pattern in Salesforce Apex:"
