@@ -1,0 +1,15 @@
+Abstract Factory Pattern => Creation Design Pattern => "Provides an interface for creating families of related or dependent objects without specifying their concrete classes"
+
+
+Problem Statement =>
+"Imagine that you are at a restraunt and want to order food and don't care about the specifics as long as its veg.
+Each member in group will have veg automatically when one member will say veg and same for non veg. Here each order needs to be automatically set"
+
+
+Solution => 
+"
+Waiter acts as a food proivder and chef act as a food factories.
+They create food and provides to client without worrying about the specifics.
+The waiter remembers your preference and uses it for all food items.
+In future, if the restraunt changes anything in food preparation process you don't need to change the order.
+"
