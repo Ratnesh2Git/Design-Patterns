@@ -1,0 +1,117 @@
+
+
+Problem Explanation Strategy Design Pattern =>
+
+Without applying pattern => Here, if we have duplicate strategy implementation for sport strategy. This includes redundancy.
+We can avoid redundancy using strategy design pattern.
+
+public virtual class Vehicle {
+	
+	public virtual void drive() {
+		System.debug('Normal Drive capability');
+	}
+
+}
+
+public class SportVehicle extends Vehicle {
+
+	// here we are overrding drive with own sport strategy
+	public override void drive() {
+		System.debug('Sport Vehicle Capability');
+	}
+}
+
+
+public class PassengerVehicle extends Vehicle {
+
+	// No need to override since it will use same normal capability
+
+}
+
+public class fastVehicle extends Vehicle {
+
+	// here we are overrding drive with own sport strategy
+	public override void drive() {
+		System.debug('Sport Vehicle Capability');
+	}
+
+}
+
+
+After applying pattern => Here, we can create separate interface for strategy and call different strategy in run time.
+
+public interface IDriveStrategy {
+	public void drive();
+}
+
+public class NormalDriveStrategy implements IDriveStrategy {
+
+	public void drive() {
+		System.debug('normal drive capability');
+	}
+}
+
+
+
+public class SportriveStrategy implements IDriveStrategy {
+
+	public void drive() {
+		System.debug('Sports drive capability');
+	}
+}
+
+
+public virtual class Vehicle {
+
+	IDriveStrategy driveObject;
+	
+	public Vehicle(IDriveStrategy driveObj) {
+		this.driveObject = driveObj;
+	}
+	
+	public void drive(){
+		driveObject.drive();
+	}
+
+}
+
+public class fastVehicle extends Vehicle {
+
+	public fastVehicle() {
+		super( new SportriveStrategy());
+	}
+
+}
+
+public class SportVehicle extends Vehicle {
+
+
+	public SportVehicle() {
+		super( new SportriveStrategy());
+	}
+}
+
+public class PassengerVehicle extends Vehicle {
+
+	public PassengerVehicle() {
+		super( new NormalDriveStrategy());
+	}
+
+}
+
+
+/**
+Anonynmous Apex
+
+Vehicle vehicle = new PassengerVehicle();
+vehicle.drive();
+
+
+*/
+
+
+
+
+
+
+
