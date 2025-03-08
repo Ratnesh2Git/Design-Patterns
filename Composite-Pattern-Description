@@ -1,0 +1,47 @@
+Composite Pattern => Structural Design Pattern => "allows composing objects into tree-like structure and work with it as if it was a singular object"
+
+Problem Statement -
+1) You want to determine size of all files inside of a folder, including the ones in sub-folders
+2) That would be easy if we had only had folders few levels deep.
+3) But for deep hierarchies its not that simple
+4) Problem becomes worse if blank folders have a few bytes by themselves.
+
+Solution =>
+1) Composite Pattern suggests that you work with files and folders though a common interface which declares a method for calculating the size.
+
+Example without applying pattern ->
+
+Class File{
+private decimal size;
+
+public File(decimal size) {
+this.size = size;
+}
+
+public decimal getSize(){
+return size;
+}
+}
+
+class Folder {
+
+private decimal size;
+private List<FIle> files = new List<File>();
+private List<Folder> subfolders = new List<Folder>();
+
+public Folder(decimal size = 0){
+this.size = size;
+}
+
+public Decimal getSize(){
+return size;
+}
+
+public void Addchild(File file){
+files.add(file);
+}
+
+public void Addchild(Folder subfolder) {
+subfolders.add(subfolder);
+}
+}
