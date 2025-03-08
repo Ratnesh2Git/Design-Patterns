@@ -1,0 +1,11 @@
+Decorator Pattern => Structural Design Pattern => "alows adding new behaviors to object dynamically by placing them inside special wrapper objects called decorators"
+
+Problem Statement => 
+1) You want to offer other types of toppings as well
+2) Users may want multiple toppings at once
+3) Even having 3 toppings increases the number of combinations of 8
+
+Solution =>
+We can create a decorator/wrapper class that can be customized to meet specific needs. 
+Object of this class can use the behaviour of various classes, having references to multiple objects and delegating them all kinds of work
+
